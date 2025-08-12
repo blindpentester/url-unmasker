@@ -4,7 +4,6 @@
 // - DNS -> IP, follows up to 15 redirects.
 // - HTTPS via OpenSSL (open-source). Certificate verification is OFF by default
 //   to avoid external CA dependencies; you can enable it with VERIFY_TLS=1.
-// Jack-safe: no link execution; shows where you'd land.
 
 #include <arpa/inet.h>
 #include <netdb.h>
