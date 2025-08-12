@@ -1,4 +1,4 @@
-# 🔍 Unmasker — Safe HTTP/HTTPS Redirect Inspector
+# 🔍 URL-Unmasker — Safe HTTP/HTTPS Redirect Inspector
 
 * **Unmasker** is a lightweight, open-source C++17 command-line tool for **safely revealing where a link really goes** — without ever executing the link’s payload.  
 * It performs **HEAD** requests only (no content fetched), follows redirect chains, resolves DNS → IP, and outputs the final landing URL.
