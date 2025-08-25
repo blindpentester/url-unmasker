@@ -30,7 +30,7 @@ Perfect for **security analysts, penetration testers, or anyone dealing with pot
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/unmasker.git
+git clone https://github.com/blindpentester/url-unmasker.git
 cd unmasker
 ```
 
@@ -40,21 +40,21 @@ cd unmasker
 
 #### HTTP-only build (no TLS, minimal dependencies)
 ```bash
-g++ -std=gnu++17 -O2 -Wall -Wextra -pedantic unmask.cpp -o unmask
+g++ -std=gnu++17 -O2 -Wall -Wextra -pedantic url-unmasker.cpp -o unmask
 ```
 
 > Use this if you **only** care about `http://` URLs and want a completely dependency-free build.
 
 #### HTTP + HTTPS build (OpenSSL TLS support)
 ```bash
-g++ -std=gnu++17 -O2 -Wall -Wextra -pedantic unmask.cpp -o unmask -lssl -lcrypto
+g++ -std=gnu++17 -O2 -Wall -Wextra -pedantic url-unmasker.cpp -o unmask -lssl -lcrypto
 ```
 
 > Use this if you want to **fully follow** shortlinks and redirects that go through `https://`.
 
 #### Enable TLS certificate verification
 ```bash
-g++ -std=gnu++17 -O2 -Wall -Wextra -pedantic -DVERIFY_TLS=1 unmask.cpp -o unmask -lssl -lcrypto
+g++ -std=gnu++17 -O2 -Wall -Wextra -pedantic -DVERIFY_TLS=1 url-unmasker.cpp -o unmask -lssl -lcrypto
 ```
 
 > By default, TLS certificate verification is **disabled** to avoid breaking resolution for malicious or self-signed hosts.
